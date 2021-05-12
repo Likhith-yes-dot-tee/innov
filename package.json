@@ -1,0 +1,30 @@
+{
+  "name": "digabc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node db.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "connect-flash": "^0.1.1",
+    "connect-mongodb-session": "^2.4.1",
+    "dateformat": "^4.5.1",
+    "ejs": "^3.1.6",
+    "execution-time": "^1.4.1",
+    "express": "^4.17.1",
+    "express-device": "^0.4.2",
+    "express-session": "^1.17.1",
+    "express-useragent": "^1.0.15",
+    "ip": "^1.1.5",
+    "mongodb": "^3.6.6",
+    "timer.js": "^1.0.4",
+    "url": "^0.11.0",
+    "url-parse": "^1.5.1",
+    "validator": "^13.6.0"
+  }
+}

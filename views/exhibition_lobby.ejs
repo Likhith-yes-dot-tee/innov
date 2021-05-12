@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exhibition Hall</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <style>
+      .compatibility-message {
+        display: none;
+      }
+      @media (orientation: portrait) {
+        html,
+        body {
+          overflow: hidden;
+          background-color: #000;
+          max-width: 100%;
+        }
+        .compatibility-message {
+          display: block;
+          position: fixed;
+          z-index: 999999;
+          width: 100%;
+          height: 100%;
+          background: #13110e;
+          text-align: center;
+        }
+
+        .compatibility-message img {
+          max-width: 100%;
+        }
+      }
+
+      /*------------hotsport css-----------------*/
+      .hotspots {
+        width: 25px;
+        height: 25px;
+        background-color: #3ab3ef;
+        border-radius: 50%;
+        position: absolute;
+        animation: wave 1s infinite;
+        cursor: pointer;
+      }
+      .digital_booth {
+        left: 23.5%;
+        bottom: 28.5%;
+      }
+      .partnership_booth
+       {
+        left: 48%;
+        top: 49%;
+      }
+
+      .innovation_booth {
+        right: 30%;
+        bottom: 29%;
+      }
+
+      .hotspots::before {
+        content: attr(text);
+        width: max-content;
+        position: absolute;
+        background-color: #222222dd;
+        color: #fff;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 30px;
+        padding: 8px 20px;
+        font-size: 14px;
+        border-radius: 3px;
+        display: none;
+      }
+
+      .hotspots::after {
+        content: "";
+        border-color: transparent transparent #222222dd;
+        border-width: 0 8px 6px;
+        border-style: solid;
+        position: absolute;
+        top: 24px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: none;
+      }
+
+      .hotspots:hover::before,
+      .hotspots:hover::after {
+        display: block;
+      }
+      @media (max-width: 768px) {
+        .hotspots {
+          width: 13px;
+          height: 13px;
+        }
+        .digital_booth {
+       
+        bottom: 30%;
+      }
+
+      .innovation_booth {
+        
+        top: 67%;
+      }
+
+      .partnership_booth {
+        
+        bottom: 32%;
+      }
+
+      }
+      @media only screen and (min-width: 1280px)  {
+        .hotspots {
+          width: 25px;
+          height: 25px;
+        }
+        .innovation_booth {
+        
+        top: 68%;
+      }
+      }
+
+  @media (max-width:450px){
+    .digital_booth { 
+       bottom: 32%;
+     }
+     .innovation_booth {
+       top: 64%;
+     }
+     .partnership_booth {
+       top: 45%;
+     }
+}
+
+      /*------------hotsport css-----------------*/
+      body {
+       
+        overflow: hidden; 
+        }
+        .back {
+        max-width: 40px;
+        top:14%;
+        left: 5%;
+        position: absolute;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <!----------------phone orintation-------------------->
+    <div class="compatibility-message">
+      <img src="images/orintation.jpeg" alt="" />
+    </div>
+
+    <!----------------phone orintation-------------------->
+    <!------Top navebar------->
+    <%- include('./top_nav'); %>
+
+    <!------Top navebar------->
+
+    <!---------------------landing-page--------------------------------->
+    <section>
+      <div class="landing">
+     
+        <img src="images/Align Virtual Booth_Overall Booths_v5a.png" alt="" style="width: 100%" />
+ <a href="/lobby">  <img class="back" src="images/backbtn1.png" alt="" ></a>
+        <a href="/DigitalExperienceBooth"> <div class="hotspots digital_booth" text="Align Digital Experience"></div> </a>
+        <a href="/InnovationBooth"> <div class="hotspots innovation_booth" text=" Innovation Technology"></div> </a>
+        <a href=" /PracticePartnershipBooth"><div class="hotspots partnership_booth" text=" Partnership Partnership"></div> </a>
+      </div>
+    </section>
+
+    <!---------------------landing-page end--------------------------------->
+
+    <!------bottom navebar------->
+    <%- include('./bottom_nav'); %>
+
+    <!------bottom navebar------->
+  </body>
+</html>

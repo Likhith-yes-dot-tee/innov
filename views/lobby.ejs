@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lobby</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<style>
+  .compatibility-message {
+      display: none;
+  }
+      @media (orientation: portrait) {
+      html, body {
+          overflow: hidden;
+          background-color: #000;
+          max-width: 100%;
+      }
+      .compatibility-message {
+          display: block ;
+          position: fixed;
+          z-index: 999999;
+          width: 100%;
+          height: 100%;
+          background: #13110e;
+          text-align: center;
+      }
+      
+  
+      .compatibility-message img {
+          max-width: 100%;
+      }
+  }
+
+
+
+  @media (max-width:3840px){
+  .video{
+    position: absolute;
+    left: 72.6%;
+    top: 24%;
+  }
+  .img{
+    width:140px;
+    height:140px;
+  }
+  body{
+  position: fixed;
+  overflow: hidden; 
+  }
+}
+@media (max-width:2560px){
+  .video{
+    position: absolute;
+    left: 72.6%;
+    top: 24%;
+  }
+  .img{
+    width:100px;
+    height:100px;
+  }
+  
+}
+@media (max-width:1440px){
+  .video{
+      position: absolute;
+      left: 72.6%;
+      top: 22.9%;
+  }
+  .img{
+    width:54px;
+    height:54px;
+  }
+  
+}
+@media (max-width:992px){
+  .video{
+    position: absolute;
+    left: 71.6%;
+    top: 22%;
+  }
+  .img{
+    width:40px;
+    height: 40px;
+  }
+}
+@media (max-width:700px){
+  .video{
+    position: absolute;
+    left: 71.6%;
+    top: 21%;
+  }
+  .img{
+    width:32px;
+    height: 32px;
+  }
+  
+}
+@media (max-width:600px){
+  .video{
+    position: absolute;
+    left: 71.6%;
+    top: 21%;
+  }
+  .img{
+    width:32px;
+    height: 32px;
+  }
+}
+@media (max-width:450px){
+  .video{
+    position: absolute;
+    left: 71.6%;
+    top: 19%;
+  }
+  .img{
+    width:24px;
+    height: 24px;
+  }
+}
+.btn:hover {
+  background-color: #00ccff;
+}
+</style>
+   <!-----------customer chat support------------->
+   <script type="text/javascript">
+    (function(w,d,v3){
+    w.chaportConfig = {
+    appId : '60780dcb05af7e6b3ce00ae2',
+    appearance: {
+      windowColor: '#757272',
+      teamName: 'My test team',
+      onlineWelcome: 'Hello, we are online!',
+      offlineWelcome: 'We are not online.',
+      position: ['left',250, 200],
+      textStatuses: true
+    },
+    launcher: {
+      show: false
+    }
+    };
+    if(w.chaport)return;
+    v3=w.chaport={};
+    v3._q=[];
+    v3._l={};
+    v3.q=function(){v3._q.push(arguments)};
+    v3.on=function(e,fn){if(!v3._l[e])v3._l[e]=[];
+      v3._l[e].push(fn)};
+      var s=d.createElement('script');
+      s.type='text/javascript';
+      s.async=true;
+      s.src='https://app.chaport.com/javascripts/insert.js';
+      var ss=d.getElementsByTagName('script')[0];
+      ss.parentNode.insertBefore(s,ss)})
+      (window, document);
+  
+      $(document).ready(function(){
+      $(".helpdesk").click(function(){
+        window.chaport.on('ready', function () {
+        window.chaport.toggle();
+      })
+      }); 
+    }); 
+  
+    </script>
+
+   <!-----------customer chat support------------->
+
+
+</head>
+<body  >
+  <!----------------phone orintation-------------------->
+  <div class="compatibility-message" >
+    <img src="images/orintation.jpeg" alt="">
+  </div>
+
+  <!----------------phone orintation-------------------->
+  <!------Top navebar------->
+  <%- include('./top_nav'); %>
+
+  <!------Top navebar------->
+
+  <!---------------------landing-page--------------------------------->
+     <section>
+
+      <div class="landing">
+      
+        <img src="images/Virtual Lobby_V6.png" alt="" style="width: 100%; ">
+        <a data-toggle="modal" href="#ModalCenter"> <div class="video">
+          <img src="images/icons/media.png" class="img">
+      </div>
+    </a>
+       <a href="#"> <div class="hotspot helpdesk" text="Helpdesk"></div></a>
+       <a href="/symposiumhall"> <div class="hotspot exhibition" text="Symposium Hall"></div></a>
+       <a href="/exhibition"> <div class="hotspot enterence" text="Exhibition Hall"></div> </a>
+       <a data-toggle="modal" href="#myModal"> <div class="hotspot resource-center" text="Agenda"></div> </a>
+    </div>
+    </section>
+  
+
+
+  <!---------------------landing-page end--------------------------------->
+   <!---------------------model_1--------------------------------------------------->
+  
+<div class="modal fade" id="ModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle" style="color:#00ccff;">Clinical Eecellence</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-12">
+            <video id="myvideo1" controls style="max-width: 100%;height: auto;">
+              <source src="images/innovationbooth/video/Dr Tai - Invisalign G8 Introduction APAC.mp4" type="video/mp4" >
+             
+            </video>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+  <!---------------------model_1_end--------------------------------------------------->
+  <!------------------------- Modal_2 ---------------------------------->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Agenda</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          
+        </div>
+        <div class="modal-body">
+          <p>Speaker details</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+   <!------------------------ Modal2 end ----------------->
+
+  
+ 
+  <!------bottom navebar------->
+  <%- include('./bottom_nav'); %>
+ 
+  <!------bottom navebar------->
+
+
+
+ <!------ video stop------->
+ <script type="text/javascript">
+  $(document).ready(function() {
+ $('#ModalCenter').on('hidden.bs.modal', function() {
+   var ModalCenter = document.getElementById("myvideo1");
+   if (ModalCenter != null) {
+    ModalCenter.pause();
+    ModalCenter.currentTime = 0;
+   }
+ });
+});
+</script>
+<!------ video stop------->
+   
+
+</body>
+</html>

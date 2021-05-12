@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+   <!-- Latest compiled and minified CSS -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+   <!-- jQuery library -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+   <!-- Popper JS -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+   <!-- Latest compiled JavaScript -->
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+ 
+   <!-- JS & CSS library of MultiSelect plugin -->
+<script src="multiselect/jquery.multiselect.js"></script>
+<link rel="stylesheet" href="multiselect/jquery.multiselect.css">
+
+<style>
+  .compatibility-message {
+      display: none;
+  }
+      @media (orientation: portrait) {
+      html, body {
+          overflow: hidden;
+          background-color: #000;
+          max-width: 100%;
+      }
+      .compatibility-message {
+          display: block ;
+          position: fixed;
+          z-index: 999999;
+          width: 100%;
+          height: 100%;
+          background: #13110e;
+          text-align: center;
+      }
+      
+  
+      .compatibility-message img {
+          max-width: 100%;
+      }
+  }
+
+/*------------hotsport css-----------------*/
+.hotspots{
+  width: 22px;
+  height: 22px;
+  background-color:#3AB3EF ;
+  border-radius: 50%;
+  position: absolute;
+  animation: wave 1s infinite;
+  cursor: pointer;
+}
+
+
+.experience{
+  right: 41%;
+  bottom: 35%;
+}
+.share{
+  left: 40.50%;
+  bottom: 34%;
+}
+.hotspots::before{
+  content: attr(text);
+  width: max-content;
+  position: absolute;
+  background-color: #222222dd;
+  color: #fff;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 30px;
+  padding: 8px 20px;
+  font-size: 14px;
+  border-radius: 3px;
+  display: none;
+}
+
+.hotspots::after{
+  content: "";
+  border-color: transparent transparent #222222dd;
+  border-width: 0 8px 6px;
+  border-style: solid;
+  position: absolute;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+}
+
+.hotspots:hover::before,
+.hotspots:hover::after{
+  display: block;
+}
+@media (max-width: 768px) {
+  
+ 
+  .hotspots{
+    width: 12px;
+    height: 12px;
+  }
+  .experience{
+ 
+  bottom: 36%;
+}
+.share{
+  
+  bottom: 36%;
+}
+
+}
+/*------------hotsport css-----------------*/
+
+
+body {
+  position: fixed;
+  overflow: hidden; 
+  }
+.back {
+        max-width: 30px;
+        top:10%;
+        left: 5%;
+        position: absolute;
+        cursor: pointer;
+      }
+      @media (max-width:3840px){
+  .video{
+    position: absolute;
+    left: 28%;
+    top: 42%;
+  }
+  .img{
+    width:220px;
+    height:220px;
+  }
+}
+@media (max-width:2560px){
+  .video{
+    position: absolute;
+    left: 28%;
+    top: 42%;
+  }
+  .img{
+    width:150px;
+    height:150px;
+  }
+}
+@media (max-width:1440px){
+  .video{
+    position: absolute;
+    left: 28%;
+    top: 41%;
+  }
+  .img{
+    width:84px;
+    height:84px;
+  }
+}
+@media (max-width:1366px){
+  .video{
+    position: absolute;
+    left: 28%;
+    top: 40.70%;
+  }
+  .img{
+    width:76px;
+    height:76px;
+  }
+}
+@media (max-width:1024px){
+  .a.video{
+    position: absolute;
+    left: 27.30%;
+    top: 42%;
+  }
+  .img{
+    width:70px;
+    height:70px;
+  }
+}
+@media (max-width:992px){
+  .video{
+    position: absolute;
+    left: 27.60%;
+    top: 39%;
+  }
+  .img{
+    width:50px;
+    height:50px;
+  }
+}
+@media (max-width:700px){
+  .video{
+    position: absolute;
+    left: 27.60%;
+    top: 40.30%;
+  }
+  .img{
+    width:45px;
+    height: 45px;
+  }
+}
+@media (max-width:600px){
+  .video{
+    position: absolute;
+    left: 30%;
+    top: 38.70%;
+  }
+  .img{
+    width:36px;
+    height:34px;
+  }
+}
+@media (max-width:450px){
+  .video{
+    position: absolute;
+    left: 28%;
+    top: 38%;
+  }
+  .img{
+    width:22px;
+    height:20px;
+  }
+}
+.btn:hover {
+  background-color: #00ccff;
+}
+ /*--------------select_1 check box css------------------------*/
+
+  input{
+    margin-left: 10px;
+  }
+        .selectBox {
+            position: relative;
+        }
+  
+       
+  
+        .overSelect {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+  
+        #checkBoxes {
+            display: none;
+            border: 1px #A9A9A9 solid;
+        }
+  
+        #checkBoxes label {
+            display: block;
+        }
+  
+        #checkBoxes label:hover {
+            background-color: #00ccff;
+        }
+
+  /*-------------select_1 check box css end--------------------------*/
+  /*-------------select_2 check box css--------------------------*/
+  #checkBoxes2 {
+            display: none;
+            border: 1px #A9A9A9 solid;
+        }
+  
+        #checkBoxes2 label {
+            display: block;
+        }
+  
+        #checkBoxes2 label:hover {
+            background-color: #00ccff;
+        }
+  /*-------------select_2 check box css end--------------------------*/
+</style>
+  
+</head>
+<body  >
+  <!----------------phone orintation-------------------->
+  <div class="compatibility-message" >
+    <img src="images/orintation.jpeg" alt="">
+  </div>
+
+  <!----------------phone orintation-------------------->
+  <!------Top navebar------->
+  <%- include('./top_nav'); %>
+
+  <!------Top navebar------->
+
+  <!---------------------landing-page--------------------------------->
+     <section>
+
+      <div class="landing">
+     
+        <img src="images/digitalbooth/Align Booth_Digital.png"  alt="" style="width: 100%; ">
+        <a data-toggle="modal" href="#exampleModalCenter">  
+          <div class="video">
+            <img src="images/icons/media.png" class="img">
+          </div>
+        </a>
+        <a href="/exhibition">  <img class="back" src="images/backbtn1.png" alt="" ></a>
+       
+        
+       <a data-toggle="modal" href="#modelform"> <div class="hotspots share" text="Share"></div> </a>
+        <a data-toggle="modal" href="#myModal3"><div class="hotspots experience" text="Learn More"></div> </a>
+        
+    </div>
+    
+    </section>
+  
+  <!---------------------landing-page end--------------------------------->
+  <!---------------------model_1--------------------------------------------------->
+  
+ <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle" style="color:#00ccff;">Align Digital Experience</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-12">
+            <video id="myvideo" controls style="max-width: 100%;height: auto;">
+              <source src="images/digitalbooth/Align digital experience FINAL (HighresMP4).mp4" type="video/mp4" >
+             
+            </video>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+  </div>
+</div> 
+
+  <!---------------------model_1_end--------------------------------------------------->
+
+ <!---------------------model_2--------------------------------------------------->
+  
+ <div class="modal fade" id="modelform" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable" role="document">
+    <div class="modal-content ">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle" style="color:#00ccff;">Align Digital Experience</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          
+          <div class="form-group">
+            <label >After visiting the booth today, which digital tools are you interested in trying out?</label>
+            <div class="multipleSelection">
+              <div class="selectBox" 
+                  onclick="showCheckboxes()">
+                  <select class="form-control">
+                      <option>Select options</option>
+                  </select>
+                  <div class="overSelect"></div>
+              </div>
+    
+              <div id="checkBoxes">
+                  <label >
+                      <input type="checkbox" id="first" />
+                      SmileView In-Practice
+                  </label>
+                    
+                  <label >
+                      <input type="checkbox" id="second" />
+                      My Invisalign App + Virtual Care
+                  </label>
+                  <label for="third">
+                      <input type="checkbox" id="third" />
+                      Invisalign Photo Uploader
+                  </label>
+                  <label >
+                      <input type="checkbox" id="fourth" />
+                      ClinCheck Pro 6.0 with 3D Controls
+                  </label>
+                  <label >
+                    <input type="checkbox" id="fith" />
+                    ClinCheck In-Face Visualisation Tool
+                </label>
+                <label >
+                  <input type="checkbox" id="sixth" />
+                  iTero iOSim
+              </label>
+              <label >
+                <input type="checkbox" id="seventh" />
+                iTero Timelapse
+            </label>
+            <label >
+              <input type="checkbox" id="eighth" />
+              iTero Interproixmal Caries Detection
+          </label>
+              </div>
+          </div>
+          </div>
+          <div class="form-group">
+            <label >What are the reasons you are not using the digital tools that you are interested now?</label>
+            <div class="multipleSelection">
+              <div class="selectBox" 
+                  onclick="showCheckboxes2()">
+                  <select class="form-control">
+                      <option>Select options</option>
+                  </select>
+                  <div class="overSelect"></div>
+              </div>
+    
+              <div id="checkBoxes2">
+                  <label >
+                      <input type="checkbox" id="1" />
+                      Need more support from PDMs' follow up
+                  </label>
+                    
+                  <label >
+                      <input type="checkbox" id="2" />
+                      Need a demo session from PDMs
+                  </label>
+                  <label for="third">
+                      <input type="checkbox" id="3" />
+                      Need walkthrough guidance in IDS
+                  </label>
+                 
+              </div>
+          </div>
+            
+            
+            
+          
+          </div>	
+          <div class="form-group">
+            <label for="exampleInputEmail1">Name</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Name">
+            
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+          </div>
+         
+          <div class="text-center">
+            <button type="button" class="btn btn-secondary">Submit</button>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+  <!---------------------model_2_end--------------------------------------------------->
+
+  <!--------------------- Modal_3 ------------------------------------------>
+  <div class="modal fade" id="myModal3" role="dialog">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    
+      <!-- Modal content-->
+      <div class="modal-content ">
+        <div class="modal-header"  >
+          <h4 class="text-right" style="color:#00ccff;margin-left: 20px;">Align Digital Experience</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          
+        </div>
+        <div class="modal-body " >
+            <div id="carouselExample" class="carousel slide" data-ride="carousel" data-interval="false">
+                <div class="carousel-inner">
+   <!--------------------------===========slider_======================----------------->
+   <div class="carousel-item active" >
+    <div class="row">
+    <div class="col-md-12">
+      <img class="d-block w-100 img-fluid" src="images/digitalbooth/Digital Experience Overview.png">
+    </div>
+  </div>
+   
+   
+    
+   
+    
+ 
+  </div>
+<!--------------------------===========slider_1_end======================----------------->
+ 
+  <!--------------------------===========slider_2======================----------------->
+                  <div class="carousel-item" >
+                    <div class="row">
+                    <div class="col-md-12">
+                      <h4 style="color: 	#00ccff;">Capture</h4>
+                      <h5>Drive awareness before the first office visit</h5>
+                    </div>
+                  </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                          <p>Our Digital tools to support:</hp>
+                      </div>
+                     
+                  </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img class="d-block w-100 img-fluid" src="images/digitalbooth/SmileView - Photo retouch before & after.jpg">
+                        </div>
+                        <div class="col-md-6">
+                            <h6 style="color: 	#00ccff;">SmileView</h6>
+                            <p >A non-clinical tool to help <span style="font-weight: bold;">engage your patients/consumers</span> associated with your practice, to create awareness, increase interest and convert more consumers into Invisalign treatment.
+
+                              Allow your patients to visualise themselves with a healthy, beautiful smile <span style="font-weight: bold;">in 60 seconds.</span> 
+                            </p>
+                        </div>
+                    </div><br>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img class="d-block w-100 img-fluid" src="images/digitalbooth/SmileView - Photo retouch before & after.jpg">
+                        </div>
+                        <div class="col-md-6">
+                          <h6 style="color: 	#00ccff;">My Invisalign App</h6>
+                          <p >A non-clinical tool to help <span style="font-weight: bold;">engage your patients/consumers</span> associated with your practice, to create awareness, increase interest and convert more consumers into Invisalign treatment.
+
+                            Allow your patients to visualise themselves with a healthy, beautiful smile <span style="font-weight: bold;">in 60 seconds.</span> 
+                          </p>
+                        </div>
+                    </div><br>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img class="d-block w-100 img-fluid" src="images/digitalbooth/SmileView - Photo retouch before & after.jpg">
+                        </div>
+                        <div class="col-md-6">
+                          <h6 style="color: 	#00ccff;">Invisalign Virtual Appointment</h6>
+                          <p >A non-clinical tool to help <span style="font-weight: bold;">engage your patients/consumers</span> associated with your practice, to create awareness, increase interest and convert more consumers into Invisalign treatment.
+
+                            Allow your patients to visualise themselves with a healthy, beautiful smile <span style="font-weight: bold;">in 60 seconds.</span> 
+                          </p>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                      <div class="col-md-6">
+                          <img class="d-block w-100 img-fluid" src="">
+                      </div>
+                      <div class="col-md-6">
+                        <p>
+                        </p>
+                      </div>
+                  </div>
+                 
+                  </div>
+  <!--------------------------===========slider_2_end======================----------------->
+  <!--------------------------===========slider_3===========================---------------->
+                  <div class="carousel-item">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <h4 style="color: 	#00ccff;">Scan</h4>
+                        <h5>Capture patient data and digital imaging</h5>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                          <p >Our Digital tools to support:</hp>
+                      </div>
+                     
+                  </div>
+                      <div class="row">
+                            <div class="col-md-6">
+                                <img class="d-block w-100 img-fluid" src="images/digitalbooth/IPU.png">
+                            </div>
+                            <div class="col-md-6">
+                              <h6 style="color: 	#00ccff;">Invisalign Photo Uploader</h6>
+                          <p >Simplify the creation of new Invisalign patient treatment records, capture quality photos, and upload directly to your Invisalign Doctor Site from a mobile device. 
+                            The wide-smile photo taken with the app to enable you to see ClinCheck In-Face Visualization.
+                          </p>
+                        </div>
+                        </div><br>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img class="d-block w-100 img-fluid" src="images/digitalbooth/iTero Scanner.jpg">
+                            </div>
+                            <div class="col-md-6">
+                              <h6 style="color: 	#00ccff;">iTero scanner</h6>
+                              <p >The iTero Scanner is a <span style="font-weight: bold;"> multidisciplinary intraoral scanner.</span> It can capture the 3D digital impression, 
+                                intraoral photo and Near-Infrared Imaging (NIRI)* <span style="font-weight: bold;">in one scan.</span> The iTero intraoral scan can be used to <span style="font-weight: bold;">diagnose, 
+                                communicate and educate</span> your patients interactively as part of your clinical consultation.​
+                              </p>
+                            </div>
+                        </div><br>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img class="d-block w-100 img-fluid" src="images/digitalbooth/NIRI.png">
+                            </div>
+                            <div class="col-md-6">
+                              <h6 style="color: 	#00ccff;">Interproixmal caries detection aid</h6>
+                              <p >Detecting<span style="font-weight: bold;"> interproximal caries</span> without harmful radiation​. Provides addition capabilities and information to the digital scans to 
+                                <span style="font-weight: bold;"> diagnose potential caries</span> in order to ensure a healthy treatment and imparts<span style="font-weight: bold;"> hygiene awareness.</span>
+                              </p>
+                            </div>
+                        </div><br>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img class="d-block w-100 img-fluid" src="images/digitalbooth/IOSIM.png">
+                            </div>
+                            <div class="col-md-6">
+                              <h6 style="color: 	#00ccff;">Invisalign Outcome Simulator</h6>
+                          <p >Show patients their potential smile with the Invisalign Outcome Simulator​ Improves patients’ understanding of their condition and proposed​ treatment. Showing patients a visualisation of their potential smiles may increase case acceptance.​ Invite patients to be the driver of their own treatment and make treatment decisions alongside with you.
+ 
+                          </p>
+                            </div>
+                        </div>
+                       
+                  </div>
+<!--------------------------===========slider_3_end======================----------------->
+<!--------------------------===========slider_4==========================----------------->
+                  <div class="carousel-item">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <h4 style="color: 	#00ccff;">Plan</h4>
+                        <h5>Enhanced digital treatment planning tools</h5>
+                      </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img class="d-block w-100 img-fluid" src="images/digitalbooth/ClinCheck Pro 6 with 3D Controls.jpg">
+                        </div>
+                        <div class="col-md-6">
+                          <h6 style="color: 	#00ccff;">ClinCheck Pro with 3D Controls</h6>
+                          <p >Elevate your digital treatment planning experience with the latest innovation ClinCheck Pro 6.0​. Review, modify and approve treatment 
+                            plan using cloud-based software and more precise control brought by ClinCheck Pro’s 3D controls
+                          </p>
+                        </div>
+                    </div><br>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img class="d-block w-100 img-fluid" src="images/digitalbooth/In-Face Visualization.png">
+                        </div>
+                        <div class="col-md-6">
+                          <h6 style="color: 	#00ccff;">ClinCheck In-Face Visualization Tool</h6>
+                          <p >Brings the treatment planning experience to the next level with ClinCheck In Face Visualisation tool​. Allows you to see a 2D3D integration. Integrates the 3D tooth model into a picture of your patient’s face,
+                             allowing you to modify a treatment plan with the benefit of facial landmarks​.
+                          </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img class="d-block w-100 img-fluid" src="">
+                        </div>
+                        <div class="col-md-6">
+                            <p>
+                            </p>
+                        </div>
+                    </div>
+                  
+                  </div>
+ <!--------------------------===========slider_4_end==========================----------------->
+ <!--------------------------===========slider_5==========================----------------->
+                  <div class="carousel-item">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <h4 style="color: 	#00ccff;">Treat</h4>
+                        <h5>Office delivery of customised, digitally designed aligners</h5>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                          <p >Our Digital tools to support:</hp>
+                      </div>
+                     
+                  </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img class="d-block w-100 img-fluid" src="images/digitalbooth/Invisalign aligner Image.png">
+                        </div>
+                        <div class="col-md-6">
+                          <h6 style="color: 	#00ccff;">Invisalign Clear Aligners</h6>
+                          <p >Invisalign clear aligners deliver more predictable results 
+                            with three patented SMART technologies
+                          </p>
+                          <ul >
+                            <li >SMART force features  for better control and predictability</li>
+                            <li>SMART Track material for gentle, more constant force to improve control of tooth movements</li>
+                            <li>SMART stage technology for optimisation of tooth movement progrssion while minimising intra-arch and inter-arch interferences</li>
+                          </ul>  
+                        </div>
+                    </div><br>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img class="d-block w-100 img-fluid" src="">
+                        </div>
+                        <div class="col-md-6">
+                            <p>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img class="d-block w-100 img-fluid" src="">
+                        </div>
+                        <div class="col-md-6">
+                            <p>
+                            </p>
+                        </div>
+                    </div>
+                  
+                  
+                  </div>
+<!--------------------------===========slider_5_end==========================----------------->
+<!--------------------------===========slider_6==========================----------------->
+                  <div class="carousel-item">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <h4 style="color: 	#00ccff;">Monitor</h4>
+                        <h5>Follow treatment progress remotely</h5>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                          <p >Our Digital tools to support:</hp>
+                      </div>
+                     
+                  </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img class="d-block w-100 img-fluid" src="images/digitalbooth/Virtual care_MyInvisalignApp image.png">
+                        </div>
+                        <div class="col-md-6">
+                          <h6 style="color: 	#00ccff;">Invisalign Virtual Care through My Invisalign app</h6>
+                          <p >Connected. Convenient. Confident.​ And always Doctor directed. ​
+                             Virtual Care through My Invisalign app allows patients to share photos with you and you can provide feedback after reviewing the photo.
+                             It allows you to stay virtually connected with your patients and ensures that you stay on track toward your patients' new smile.
+                          </p>
+                        </div>
+                    </div><br>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img class="d-block w-100 img-fluid" src="images/digitalbooth/Progress Assessment.jpg">
+                        </div>
+                        <div class="col-md-6">
+                          <h6 style="color: 	#00ccff;">Invisalign Progress Assessment</h6>
+                          <p >Show patient <span style="font-weight: bold;">real-time comparison</span> with Progress Assessment.
+                            <span style="font-weight: bold;">Evaluate progress</span> during Invisalign treatment. You will know exactly how treatment is progressing and can 
+                            <span style="font-weight: bold;"> accelerate or decelerate</span> aligner wear at any time during treatment. Improve patient compliance.                            
+                          </p>
+                        </div>
+                    </div><br>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img class="d-block w-100 img-fluid" src="images/digitalbooth/TimeLapse.png">
+                        </div>
+                        <div class="col-md-6">
+                          <h6 style="color: 	#00ccff;">iTero TimeLapse</h6>
+                          <p >Utilize iTero's unique TimeLapse to visualize and communicate any <span style="font-weight: bold;">changes that happen over time.</span> 
+                            Observable changes include and not limited to  before-and-after effect of treatments, tooth movements, tooth wears, gingival recession, relapse and retention.
+                          </p>
+                        </div>
+                    </div><br>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img class="d-block w-100 img-fluid" src="images/digitalbooth/Vivera_image_whitecase.jpg">
+                        </div>
+                        <div class="col-md-6">
+                          <h6 style="color: 	#00ccff;">Vivera Retainers</h6>
+                          <p >Keep your patients smiling with Vivera retainers. 
+                             Vivera retainer is a premium, long term retention solution and is a part of your Align digital workflow.
+                             Vivera retainers work hard for your practice and your patients by keeping the smiles you created beautifully.
+                          </p>
+                        </div>
+                    </div>
+                  
+                  </div>
+<!--------------------------===========slider_6_end==========================----------------->
+              </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a href="#carouselExample" class="btn btn-info text-light d-flex" data-slide="prev" >&laquo; Previous</a>
+            <a href="#carouselExample" class="btn btn-info text-light ml-auto" data-slide="next">Next &raquo;</a>
+      
+        </div>
+      </div>
+      
+    </div>
+  </div>
+   <!------------------------ Modal_3 end ----------------->
+
+  <!------bottom navebar------->
+  <%- include('./bottom_nav'); %>
+ 
+  <!------bottom navebar------->
+
+
+<!------ video stop------->
+  <script type="text/javascript">
+   $(document).ready(function() {
+  $('#exampleModalCenter').on('hidden.bs.modal', function() {
+    var exampleModalCenter = document.getElementById("myvideo");
+    if (exampleModalCenter != null) {
+      exampleModalCenter.pause();
+      exampleModalCenter.currentTime = 0;
+    }
+  });
+});
+</script>
+<!------ video stop------->
+<script>
+        var show = true;
+  
+        function showCheckboxes() {
+            var checkboxes = 
+                document.getElementById("checkBoxes");
+  
+            if (show) {
+                checkboxes.style.display = "block";
+                show = false;
+            } else {
+                checkboxes.style.display = "none";
+                show = true;
+            }
+        }
+    </script>
+    <script>
+      var show = true;
+
+      function showCheckboxes2() {
+          var checkboxes = 
+              document.getElementById("checkBoxes2");
+
+          if (show) {
+              checkboxes.style.display = "block";
+              show = false;
+          } else {
+              checkboxes.style.display = "none";
+              show = true;
+          }
+      }
+  </script>
+</body>
+</html>

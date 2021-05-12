@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partnership</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<style>
+  .compatibility-message {
+      display: none;
+  }
+      @media (orientation: portrait) {
+      html, body {
+          overflow: hidden;
+          background-color: #000;
+          max-width: 100%;
+      }
+      .compatibility-message {
+          display: block ;
+          position: fixed;
+          z-index: 999999;
+          width: 100%;
+          height: 100%;
+          background: #13110e;
+          text-align: center;
+      }
+      
+  
+      .compatibility-message img {
+          max-width: 100%;
+      }
+  }
+
+/*------------hotsport css-----------------*/
+.hotspots{
+  width: 25px;
+  height: 25px;
+  background-color:#3AB3EF ;
+  border-radius: 50%;
+  position: absolute;
+  animation: wave 1s infinite;
+  cursor: pointer;
+}
+
+
+.zoom{
+  left:40.50% ;
+  top: 45.70%;
+}
+
+.inv{
+  right: 18%;
+  bottom: 51%;
+}
+.support_chat{
+  right: 25%;
+  bottom: 30%;
+}
+.form{
+  right: 40%;
+  bottom: 30%;
+}
+
+.hotspots::before{
+  content: attr(text);
+  width: max-content;
+  position: absolute;
+  background-color: #222222dd;
+  color: #fff;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 30px;
+  padding: 8px 20px;
+  font-size: 14px;
+  border-radius: 3px;
+  display: none;
+}
+
+.hotspots::after{
+  content: "";
+  border-color: transparent transparent #222222dd;
+  border-width: 0 8px 6px;
+  border-style: solid;
+  position: absolute;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+}
+
+.hotspots:hover::before,
+.hotspots:hover::after{
+  display: block;
+}
+@media (max-width: 768px) {
+  
+ 
+    .hotspots{
+      width: 12px;
+      height: 12px;
+    }
+   
+  }
+/*------------hotsport css-----------------*/
+body {
+  position: fixed;
+  overflow: hidden; 
+  }
+
+.back {
+        max-width: 65px;
+        top:10%;
+        left: 5%;
+        position: absolute;
+        cursor: pointer;
+      }
+</style>
+
+ <!-----------customer chat support------------->
+ <script type="text/javascript">
+  (function(w,d,v3){
+  w.chaportConfig = {
+  appId : '6098deb4ca761d0b19defc65',
+  appearance: {
+    windowColor: '#757272',
+    teamName: 'My test team',
+    onlineWelcome: 'Hello, we are online!',
+    offlineWelcome: 'We are not online.',
+    position: ['right', 90, 160],
+    textStatuses: true
+  },
+  launcher: {
+    show: false
+  }
+  };
+  if(w.chaport)return;
+  v3=w.chaport={};
+  v3._q=[];
+  v3._l={};
+  v3.q=function(){v3._q.push(arguments)};
+  v3.on=function(e,fn){if(!v3._l[e])v3._l[e]=[];
+    v3._l[e].push(fn)};
+    var s=d.createElement('script');
+    s.type='text/javascript';
+    s.async=true;
+    s.src='https://app.chaport.com/javascripts/insert.js';
+    var ss=d.getElementsByTagName('script')[0];
+    ss.parentNode.insertBefore(s,ss)})
+    (window, document);
+
+    $(document).ready(function(){
+    $(".support_chat").click(function(){
+      window.chaport.on('ready', function () {
+      window.chaport.toggle();
+    })
+    }); 
+  }); 
+
+  </script>
+
+ <!-----------customer chat support------------->
+
+  
+</head>
+<body  >
+  <!----------------phone orintation-------------------->
+  <div class="compatibility-message" >
+    <img src="images/orintation.jpeg" alt="">
+  </div>
+
+  <!----------------phone orintation-------------------->
+  <!------Top navebar------->
+  <%- include('./top_nav'); %>
+
+  <!------Top navebar------->
+
+  <!---------------------landing-page--------------------------------->
+     <section>
+
+      <div class="landing">
+        <img src="images/Booth_Practice Partnership.png" alt="" style="width: 100%; ">
+        <a href="/exhibition">  <img class="back" src="images/backbtn1.png" alt="" ></a>
+       
+       <a data-toggle="modal" href="#myModal_1"> <div class="hotspots zoom" text="Zoom Meeting"></div> </a>
+        <a data-toggle="modal" href="#myModal_2"><div class="hotspots inv" text="Invisalign Center"></div> </a>
+        <a data-toggle="modal" href="#modalContactForm"><div class="hotspots form" text="Form"></div> </a>
+        <a data-toggle="modal" href=""><div class="hotspots support_chat" text="Support_chat"></div> </a>
+    </div>
+    </section>
+  
+    
+
+  <!---------------------landing-page end--------------------------------->
+   <!-------------------------- Modal_1 ----------------------->
+   <div class="modal fade" id="myModal_1" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Zoom Meeting</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          
+        </div>
+        <div class="modal-body">
+          <p>zoom meeting links....</p>
+          <p>zoom meeting links....</p>
+          <p>zoom meeting links....</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+   <!------------------------ Modal_1 --------------end ----------------->
+   
+    <!------------------------ Modal_2 --------------------------->
+  <div class="modal fade" id="myModal_2" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Invisalign Center</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          
+        </div>
+        <div class="modal-body">
+          <p>Speaker details</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+   <!------------------------ Modal_2 ---end -------------------->
+    <!------------------------ Modal_3 --------------------------->
+    <div class="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+          <h5 class="modal-title w-100 font-weight-bold">Form</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        
+        <div class="modal-body mx-3">
+          <form action="/form" method="POST">
+            <% success.forEach(function(message){ %>
+              <div class="alert alert-success text-center">
+                <%= message %>
+              </div>
+              <% }) %>
+            <div class="md-form">
+              <i class="fa fa-user prefix grey-text"></i>
+              <input type="text" id="form34" class="form-control validate" placeholder="Name" name="name" />
+            </div>
+
+            
+
+            <div class="md-form">
+              <i class="fa fa-envelope prefix grey-text"></i>
+              <input type="text" id="form29" class="form-control validate" placeholder="Email" name="email" />
+            </div>
+
+            <div class="md-form">
+              <i class="fa fa-tag prefix grey-text"></i>
+              <input type="text" id="form32" class="form-control validate" placeholder="Company Name" name="company" />
+            </div>
+  
+         
+  
+        </div>
+        <div class="modal-footer d-flex justify-content-center">
+          <button class="btn btn-unique">Send <i class="fa fa-paper-plane-o ml-1"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+ 
+   <!------------------------ Modal_3 ---end -------------------->
+
+ <!------bottom navebar------->
+ <%- include('./bottom_nav'); %>
+
+<!------bottom navebar------->
+
+
+
+ 
+   
+
+</body>
+</html>
